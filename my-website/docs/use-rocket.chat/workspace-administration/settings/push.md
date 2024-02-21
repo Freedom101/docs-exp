@@ -1,0 +1,70 @@
+# Push
+
+Enable and configure push notifications for your workspace members using mobile devices.
+
+:::info
+Workspaces on the [community](../../../readme/our-plans.md#community) plan allow up to 10,000 free monthly push notifications. Get unlimited push notifications by subscribing to any of Rocket.Chat's [premium plans](../../../readme/our-plans.md).
+:::
+
+## Push Notifications Configuration
+
+:::info
+To use push notifications, you are required to accept the **Cloud Service Privacy Terms Agreement** in the **Administration** > **Workspace** > **Settings** > **Setup Wizard** > **Cloud Info** settings.
+:::
+
+Go to **Administration > Workspace > Settings > Push** to enable push notifications**.**
+
+* **Enable**: Turn on to enable push notifications on your Rocket.Chat workspace.
+* **Enable Gateway**: Setting this to true allows you to use a custom push notification gateway. When disabled, it utilizes [Certificates and Keys](push.md#certificate-and-keys), allowing direct communication with Apple/Google instead of going through a gateway.
+
+:::info
+Rocket.Chat SaaS workspaces use the Rocket.Chat gateway by default and cannot be changed.
+
+On self-managed workspaces, you can either use the default Rocket.Chat gateway or set up a custom notification gateway.
+:::
+
+* **Gateway**: Specify the gateway to use. Multiple lines can be used to specify multiple gateways.
+* **Production:** Enable this for workspaces in production.
+
+With the configuration all done, click the **Send a test push to my user** button to send a test push to yourself.
+
+:::info
+To successfully send a test push to your user, you need to be logged in to the workspace on your mobile device and then close or minimize the application.
+:::
+
+### Certificate and Keys
+
+The workspace relies on certificates and keys to configure push notifications if gateways are not enabled. Refer to the official guide below for configuring push notifications certifications and keys on Android and iOS.
+
+[](https://developer.rocket.chat/open-source-projects/mobile-app/mobile-app-white-labelling/configuring-push-notifications)
+
+### Privacy
+
+In Privacy, you can configure what information you want your push notification to have.
+
+* **Show Channel/Group/Username in Notification**: Toggle this on to make the channel name, group name, and username visible in notifications.
+* **Show Message in Notification**: Enabling this makes messages visible in notifications.
+* **Hide message content from Apple and Google (and the Gateway, if enabled)**: Turn this on to hide the content of a message from Google/Apple or any other push gateway. This adds only the `message id` to the notification data. The mobile client dynamically fetches the content from the server and updates the notification before displaying it.  Failure to fetch a message using the provided `message id` in the push data triggers a "You have a new message" notification.
+
+:::info
+The **Hide message content from Apple and Google (and the Gateway, if enabled)** setting is accessible to workspaces subscribed to any of Rocket.Chat's [premium plans](../../../readme/our-plans.md).
+:::
+
+With the push configuration completed, follow the  [#default-user-preferences](accounts/#default-user-preferences "mention") guide to set the default user preferences for notifications. Manage channel-based notifications using the [#channel-notifications](../../user-guides/rooms/channels/edit-a-channel.md#channel-notifications "mention") guide.
+
+:::info
+On some channels, notifications can stop if the number of users exceeds the set limit. You can set the limit in **Administration** > **General** > **Notifications**. See[#notifications](general/#notifications "mention") for more information.
+:::
+
+**Cloud Sync**
+
+When you purchase a package for push notifications as a self-managed customer, navigate to [subscription.md](../subscription.md "mention") and click **Sync license updates** to sync your workspace to Rocket.Chat Cloud and fetch any required updates.
+
+## Check the count of notifications used per month
+
+To check the count of notifications used per month:
+
+* Go to [cloud.rocket.chat](http://cloud.rocket.chat)
+* Switch to the Workspaces tab
+* Select the workspace you want to check the count for
+* The push notifications block shows the number of used notifications per your current limit per month.

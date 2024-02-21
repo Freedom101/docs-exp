@@ -1,0 +1,57 @@
+# Conference Call User's Guide
+
+:::info
+Contact your workspace administrator or follow [conference-call-admin-guide](conference-call-admin-guide/ "mention") to configure conference calls in your workspace.
+:::
+
+This guide will walk you through the essential steps to effectively participate and use conference calls in your Rocket.Chat after it has been successfully [configured](conference-call-admin-guide/).
+
+In Rocket.Chat, you can initiate video and audio conference calls using your the configured provider in any [room](../user-guides/rooms/) on your workspace.
+
+## Initiating a call - Direct Message
+
+<figure><img src="/img/Premium.svg" alt=""></img><figcaption></figcaption></figure>
+
+To start a call in Direct Message,
+
+* Click on the <img src="/img/phone-icon.png" alt="" data-size="line" /> **phone** icon from the room's header. You may have pre-flight options like turning on/off the camera or microphone. However, these options depend on the conference call provider you have selected.
+* Click the **call** button. The pop-up changes to the “calling state”. Now, you can perform other actions while you wait for the receiver to answer. The ringer stays active for 30 seconds. After that **Call again** button appears in the room.
+
+## Incoming direct call
+
+<figure><img src="/img/Premium.svg" alt=""></img><figcaption></figcaption></figure>
+
+Three things happen once you receive a call:
+
+* A pop-up appears wherever you are in the Rocket.Chat application.
+* The incoming call ringer starts to ring.
+* An incoming call item will be highlighted in the left sidebar.
+
+These options are available when you have an incoming call:
+
+* Accept and join the call room.
+* Decline and give the other user feedback through the chat.
+* Dismiss and silently ignore the call.
+
+## Start a call - Room
+
+You can also start a call in other rooms like Team, Channel, Discussion, and Multiple Direct Messages.
+
+To start a call in a room,
+
+* Click on the <img src="/img/phone-icon.png" alt="" data-size="line" /> **phone** icon from the room's header. You may have pre-flight options like turning on/off the camera or microphone. However, these options depend on the conference call provider you have selected.
+* Click the **call** button. A message is sent in the room, where all participants in the call are shown as thumbnails.
+* The call message block allows the following actions: **Reply in Thread**, **Follow Message**, **React**, **Pin**, **Star**, **Copy Link** and **Delete**.
+
+:::info
+The ringing feature is unavailable in any room except **Direct Messages(DMs**).
+:::
+
+## Conference logs
+
+After a conference call is ended, the room keeps a record of the following:
+
+* The user who initiated it
+* The start time
+* The name of the conference
+* The attendees
